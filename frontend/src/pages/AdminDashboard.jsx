@@ -420,7 +420,7 @@ const AdminDashboard = () => {
                         {issue.image?.length > 0 ? (
 
                           <img
-                            src={issue.image[0]}
+                            src={issue.image}
                             alt=""
                             className="w-14 h-14 rounded-xl object-cover border"
                           />

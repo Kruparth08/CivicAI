@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axiosInstance from "../utils/axiosInstance";
 import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { getCurrentUser } = useAuth();
+  const { getCurrentUser, user } = useAuth();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -29,14 +29,19 @@ const Login = () => {
 
       const res = await axiosInstance.post("/auth/login", formData);
 
+      // Capture the role from response immediately
+      const userRole = res.data.role;
+
+      // Fetch and update user context
       await getCurrentUser();
 
       alert("Login Successful");
 
-      if (res.data.role === "admin") {
-        navigate("/admin/dashboard");
+      // Navigate based on the role from response
+      if (userRole === "admin") {
+        navigate("/admin/dashboard", { replace: true });
       } else {
-        navigate("/dashboard");
+        navigate("/dashboard", { replace: true });
       }
     } catch (error) {
       alert(error.response?.data?.message || "Login Failed");

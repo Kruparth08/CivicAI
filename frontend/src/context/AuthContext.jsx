@@ -14,7 +14,10 @@ export const AuthProvider = ({ children }) => {
       const res = await axiosInstance.get("/auth/me");
       setUser(res.data);
     } catch (error) {
-      console.error("Failed to fetch current user:", error);
+      // 401 is expected when user is not logged in
+      if (error.response?.status !== 401) {
+        console.error("Failed to fetch current user:", error);
+      }
       setUser(null);
     } finally {
       setLoading(false);
@@ -32,6 +35,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    // Always try to get current user on mount
+    // getCurrentUser handles 401 gracefully (no console error)
     getCurrentUser();
   }, []);
 

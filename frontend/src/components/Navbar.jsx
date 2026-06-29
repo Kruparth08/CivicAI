@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import axiosInstance from "../utils/axiosInstance";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, setUser } = useAuth();

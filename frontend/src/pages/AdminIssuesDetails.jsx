@@ -125,6 +125,30 @@ const AdminIssueDetails = () => {
 
   return (
     <div className="min-h-screen bg-slate-100 py-8 px-4">
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl text-white p-6 sm:p-8 shadow-lg mb-6 sm:mb-8">
+
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+
+            <div>
+              <h1 className="text-2xl sm:text-4xl font-bold break-words">
+                {issue.title}
+              </h1>
+
+              <p className="mt-2 sm:mt-3 text-blue-100 text-sm sm:text-base">
+                Detailed information about the reported civic issue.
+              </p>
+            </div>
+
+            <button
+              onClick={() => navigate(-1)}
+              className="self-start md:self-auto bg-white text-blue-700 px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl font-semibold hover:bg-blue-50 transition"
+            >
+              ← Back
+            </button>
+
+          </div>
+
+        </div>
 
       <div className="max-w-6xl mx-auto">
 
@@ -203,7 +227,7 @@ const AdminIssueDetails = () => {
 
               </div>
 
-<di className="space-y-8">
+<div className="space-y-8">
 
   {/* AI Analysis */}
 
@@ -349,7 +373,7 @@ const AdminIssueDetails = () => {
 
   </div>
 
-</di>
+</div>
 
             </div>
 

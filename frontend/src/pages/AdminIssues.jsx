@@ -186,7 +186,7 @@ const AdminIssues = () => {
         {issue.image?.length > 0 ? (
 
           <img
-            src={issue.image[0]}
+            src={issue.image}
             alt={issue.title}
             className="w-full h-60 object-cover hover:scale-110 transition duration-500"
           />

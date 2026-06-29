@@ -17,15 +17,15 @@ import NotFound from "./pages/NotFound";
 
 
 function App() {
-  // const navigate = Navigate;
+  const navigate = Navigate;
   return (
     <Routes>
       <Route
         path="/register"
         element={<Register />}
       />
-{/* 
-      <Route path="/" element={<Navigate to="/login" replace />} /> */}
+
+      <Route path="/" element={<Navigate to="/login" replace />} />
 
       <Route
   path="/login"

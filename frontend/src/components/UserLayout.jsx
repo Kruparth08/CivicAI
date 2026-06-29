@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import AssistantWidget from "../components/AI/AssistantWidget";
+// import AssistantWidget from "../components/AI/AssistantWidget";
 
 const UserLayout = ({ children }) => {
   return (
