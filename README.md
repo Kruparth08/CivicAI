@@ -4,7 +4,7 @@
 
 
 
-\
+
 
 CivicAI is an AI-powered civic issue reporting platform that simplifies the process of reporting public infrastructure problems. Citizens can submit issues such as potholes, garbage accumulation, water leakage, damaged streetlights, and other civic concerns, while an AI assistant powered by Google Gemini helps users describe issues and automatically analyzes each report.
 
