@@ -13,6 +13,7 @@ import AdminIssues from "./pages/AdminIssues"
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminIssueDetails from "./pages/AdminIssuesDetails";
 import AdminRoute from "./components/AdminRoute";
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -95,7 +96,7 @@ function App() {
     </ProtectedRoute>
   }
 />
-      <Route path="*" element={<Login />} />
+      <Route path="*" element={<NotFound />} />
 
     </Routes>
   );
