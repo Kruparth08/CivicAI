@@ -254,6 +254,37 @@ npm run dev
 * AI duplicate issue detection
 * Predictive civic analytics
 
+# 🔑 Demo Credentials
+
+To help hackathon evaluators explore all features of CivicAI, the following demo accounts are provided.
+
+## 👤 User Account
+
+**Email:** `test1@test.com`
+
+**Password:** `test123`
+
+---
+
+## 👨‍💼 Admin Account
+
+**Email:** `admin@gmail.com`
+
+**Password:** `admin123`
+
+---
+
+### Admin Access Includes
+
+* 📊 Admin Dashboard
+* 📋 View All Reported Issues
+* 🔄 Update Issue Status
+* 🗑️ Delete Issues
+* 👥 User Management
+* 📈 Analytics & Charts (Status, Department, Category)
+
+> **Note:** These demo accounts are provided exclusively for hackathon evaluation. The admin account grants access to administrative features for testing and demonstration purposes.
+
 ---
 
 # 👨‍💻 Author
